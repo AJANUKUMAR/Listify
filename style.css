@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+   background-color: rgb(255, 0, 72);
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.list-container {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    min-height: 15px;
+    max-height: fit-content;
+    padding: 20px 10px;
+    overflow-y: scroll; /* Add this line to enable vertical scrollbar */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container{
+    height:100%;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.title{
+    width:100%;
+}
+.task-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(253, 119, 119);
+
+}
+.remaining{
+    color:black;
+}
+.total{
+    color:black;
+}
+.title h1{
+    font-weight: 800px;
+    font-size: 35px;
+    padding: 20px;
+    text-align: center;
+}
+.input{
+    width: 100%;
+    background: white;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px 20px black;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.input input{
+    background: transparent;
+    flex: 1;
+    font-size: 20px;
+    border: navy;
+    outline:none;
+}
+.input:focus{
+    border-bottom: 1px solid black;
+}
+button{
+    outline: none;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+button:active{
+    transform: scale(0.90);
+}
+.cancel-btn{
+    background: grey;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    display: none;
+    
+    
+}
+.cancel-btn:hover{
+    background-color: red;
+}
+.add-btn{
+    padding: 8px 20px;
+    background:yellow;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+}
+.add-btn:hover{
+    background-color: green;
+}
+.clearall-button{
+    background-color:yellowgreen;
+    padding: 8px 20px;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+}
+.list-container{
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    min-height: 15px;
+    max-height: fit-content;
+    padding: 20px 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.list-container .list{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.items{
+    flex: 1;
+    font-size: 20px;
+    padding: 10px 20px 10px 30px ;
+    position: relative;
+    background: rgb(213, 205, 205);
+    user-select: none;
+}
+.items::before{
+    content: '';
+    position:absolute;
+    height: 17px;
+    width: 17px;
+    left:3%;
+    top: 30%;
+    transform:translate(-50%);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.items.checked{
+    text-decoration: line-through;
+    color:rgb(240, 255, 248);
+}
+.items.checked::before{
+    background: rgb(5,143,5);
+    content:'\2713';
+    color:white;
+    font-size: 20px;
+    line-height: 19px;
+}
+article i{
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+.fa-edit:hover{
+    background-color: green;
+}
+.fa-trash:hover{
+    background-color: red;
+}
+.addition-message{
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px 10px 20px 30px;
+    font-weight: bold;
+    min-width: 300px;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px black;
+    overflow: hidden;
+}
+.addition-message::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width:15px;
+    background: red;
+    top:0;
+    left:0;
+
+}
+.addition-message.success{
+    background:rgb(220, 220, 104) ;
+}
+.addition-message.warning{
+    background:rgb(198, 169, 169) ;
+    
+}
+.addition-message.inform{
+    background:rgb(214, 214, 196) ;
+}
+.addition-message.success::before{
+    background:rgb(222, 48, 80) ;
+}
+.addition-message.warning::before{
+    background:red ;
+}
+.addition-message.inform::before{
+    background:rgb(129, 14, 35) ;
+}
+
+
